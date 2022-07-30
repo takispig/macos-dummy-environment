@@ -19,7 +19,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image: url("wallpaper1.png");
+    background-image: url("photos/wallpaper1.png");
     background-size: cover;
 }
 .container {
