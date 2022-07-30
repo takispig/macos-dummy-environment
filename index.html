@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MacOS Calculator</title>
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+        <link rel="stylesheet" href="styles.css">
+        <script src="calc.js" type="module" defer></script>
+        <script src="ui.js" type="module" defer></script>
+        <script src="terminal.js" type="module" defer></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <header>
+            <div class="left">
+                <img class="fk-logo" src="fake-apple-logo.svg" alt="fake apple logo">
+                <div class="toolbar-folders">Finder Help</div>
+            </div>
+            <div class="time"></div>
+        </header>
+        <div class="container">
+            <!-- Calculator -->
+            <div class="calculator">
+                <div class="toolbar">
+                    <div class="icons">
+                        <div class="x cal"></div>
+                        <div class="minimize cal"></div>
+                        <div class="resize cal"></div>
+                    </div>
+                </div>
+                <div class="screen">
+                    <span id="result">0</span>
+                </div>
+                <div class="body">
+                    <div class="row">
+                        <div id="ac">AC</div>
+                        <div id="prefix">+/-</div>
+                        <div id="mod">%</div>
+                        <div id="division">÷</div>
+                    </div>
+                    <div class="row">
+                        <div id="n7">7</div>
+                        <div id="n8">8</div>
+                        <div id="n9">9</div>
+                        <div id="x">×</div>
+                    </div>
+                    <div class="row">
+                        <div id="n4">4</div>
+                        <div id="n5">5</div>
+                        <div id="n6">6</div>
+                        <div id="sub">−</div>
+                    </div>
+                    <div class="row">
+                        <div id="n1">1</div>
+                        <div id="n2">2</div>
+                        <div id="n3">3</div>
+                        <div id="add">+</div>
+                    </div>
+                    <div class="row">
+                        <div id="n0">0</div>
+                        <div id="dot">.</div>
+                        <div id="equals">=</div>
+                    </div>
+                </div>
+            </div>
+            <!-- Terminal -->
+            <div class="terminal">
+                <div class="toolbar">
+                    <div class="icons">
+                        <div class="x term"></div>
+                        <div class="minimize term"></div>
+                        <div class="resize term"></div>
+                    </div>
+                </div>
+                <div class="terminal-body">
+                    <div class="help">Type 'help' to check commands</div>
+                    <div class="terminal-input">
+                        <p>></p>
+                        <input type="text" name="command" class='input-term' id="input-"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer -->
+        <footer>
+            <div class="pseudo-items"></div>
+            <div class="pseudo-items"></div>
+            <div class="pseudo-items"></div>
+            <img id="calc-icon" src="calc-img.png" alt="calculator-icon">
+            <img id="term-icon" src="terminal-img.png" alt="terminal-icon">
+            <a target="_blank" href="https://github.com/takispig"><i class="fa fa-github" style="font-size:42px"></i></a>
+        </footer>
+    </body>
+</html>

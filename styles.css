@@ -1,0 +1,298 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    user-select: none; 
+}
+html {
+    height: fill-available;
+    height: -webkit-fill-available;
+}
+body {
+    font-family: Helvetica, sans-serif;
+    height: 100vh;
+    /* min-height: 100vh;
+    min-height: -webkit-fill-available; */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("wallpaper1.png");
+    background-size: cover;
+}
+.container {
+    margin-bottom: 65px;
+    flex: 1 1 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Header */
+header {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    flex: 0 0 auto;
+    padding: 5px 8px;
+    height: 24px;
+    background-color: rgba(29, 29, 29, 0.726);
+    color: white;
+    margin-bottom: 3px;
+    overflow: hidden;
+    font-size: 12px;
+    
+}
+.left {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+.left img {
+    height: 12px;
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(139deg) brightness(103%) contrast(101%);
+}
+.toolbar-folders {
+    word-spacing: 15px;
+}
+.time {
+    font-size: 12px;
+}
+
+/* Calculator */
+.calculator {
+    width: 280px;
+    height: 350px;
+    background: rgb(44, 43, 43, 0.9);
+    border-radius: 10px;
+    box-shadow: 0px 0px 6px 3px rgba(60, 60, 60, 0.436);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+.toolbar {
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+}
+.icons {
+    display: flex;
+    gap: 5px;
+}
+.x,
+.minimize,
+.resize {
+    height: 13px;
+    width: 13px;
+    font-family: 'Nunito Sans', sans-serif;
+    background-color: rgb(243, 84, 84);
+    flex: 0 0 auto;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.minimize {
+    background-color: rgba(255, 255, 0, 0.852);
+}
+.resize {
+    background-color: rgba(113, 230, 59, 0.938);
+}
+.x:hover::after {
+    content: '×';
+    font-size: 12px;
+    font-weight: 700;
+}
+.minimize:hover::after {
+    content: '-';
+    font-size: 20px;
+    font-weight: 800;
+}
+.resize:hover::after {
+    content: '+';
+    font-size: 12px;
+    font-weight: 800;
+}
+.screen {
+    height: 50px;
+    padding-right: 10px;
+    color: white;
+    font-size: 30px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    white-space: nowrap;
+    -webkit-user-select: text;  /* Chrome all / Safari all */
+    -moz-user-select: text;     /* Firefox all */
+    user-select: text; 
+}
+.body {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 0;
+    gap: 1px;
+}
+.row {
+    display: flex;
+    flex: 1 1 0;
+    gap: 1px;
+}
+.row div {
+    background-color: rgb(97, 97, 97);
+    display: flex;
+    flex: 1 1 25%;
+    color: white;
+    align-items: center;
+    justify-content: center;
+}
+#n0 {
+    flex: 1 1 50.5%;
+}
+#ac, #prefix, #mod {
+    background-color: rgb(62, 62, 62);
+}
+#division, #x, #sub, #add, #equals {
+    background-color: rgb(255, 140, 9);
+    font-size: 25px;
+}
+
+/* Terminal */
+.terminal {
+    width: 440px;
+    height: 300px;
+    background: rgb(44, 43, 43);
+    flex: 0 1 auto;
+    border-radius: 10px;
+    box-shadow: 0px 0px 6px 3px rgba(60, 60, 60, 0.436);
+    display: flex;
+    flex-direction: column;
+}
+.terminal-body {
+    padding: 10px;
+    font-size: 12px;
+    color: white;
+    font-family: 'Roboto Mono', monospace;
+    flex: 0 1 auto;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    text-align: justify;
+}
+.terminal-input {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.terminal-body input {
+    background-color: rgb(44, 43, 43);
+    color: white;
+    width: 100%;
+    /*remove all input styles to make it uniform*/
+    outline: none;
+    box-shadow: none;
+    border-color: transparent;
+    -webkit-user-select: text;  /* Chrome all / Safari all */
+    -moz-user-select: text;     /* Firefox all */
+    user-select: text; 
+}
+
+/* Footer */
+footer {
+    width: fit-content;
+    height: 60px;
+    position: fixed;
+    bottom: 0;
+    background-color: rgba(102, 102, 102, 0.526);
+    color: white;
+    border-radius: 20px;
+    margin-bottom: 3px;
+    overflow: hidden;
+    border: 1px solid rgb(186, 186, 186, 0.4);
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-inline: 10px;
+}
+.pseudo-items {
+    height: 40px;
+    width: 50px;
+    border: 1px solid black;
+    border-radius: 10px;
+    filter: blur(3px);
+    background-color: dodgerblue;
+}
+.pseudo-items:hover, i:hover, footer img:hover {
+    transform: scale(1.25);
+}
+footer img {
+    height: 42px;
+    width: 44px;
+}
+a i {
+    color: white;
+}
+/* Portrait smartphones */
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+    .terminal {
+        width: 100%;
+        max-height: auto;
+        margin-inline: 10px;
+    }
+    body {
+        overflow: auto;
+    }
+}
+/* Landscape smartphones */
+@media only screen 
+and (min-device-height : 320px) 
+and (max-device-height : 480px) {
+    .terminal {
+        width: auto;
+        max-height: auto;
+        margin-inline: 10px;
+    }
+    .calculator {
+        max-height: 80vh;
+    }
+    body {
+        overflow: auto;
+    }
+}
+
+@media (hover : hover) {
+    /* target devices with hover functionalities */
+    .row div:hover {
+        background-color: rgb(112, 112, 112);
+    }
+    #ac:hover, #prefix:hover, #mod:hover {
+        background-color: rgb(70, 70, 70);
+    }
+    #division:hover, #x:hover, #sub:hover, #add:hover, #equals:hover{
+        background-color: rgb(255, 156, 42);
+        font-size: 25px;
+    }
+}
+@media (hover : none) {
+    /* target touch capable devices */
+    .row div:active {
+        background-color: rgb(112, 112, 112);
+    }
+    #ac:active, #prefix:active, #mod:active {
+        background-color: rgb(70, 70, 70);
+    }
+    #division:active, #x:active, #sub:active, #add:active, #equals:active{
+        background-color: rgb(255, 156, 42);
+        font-size: 25px;
+    }
+}
