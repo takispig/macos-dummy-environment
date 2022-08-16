@@ -1,5 +1,7 @@
 # macos-dummy-environment
 
+[Live Preview](https://takispig.github.io/macos-dummy-environment/)
+
 <p align="center">
   <img src="photos/Screenshot_laptop.png" height="350" alt="photo1">
   <img src="photos/Screenshot_phone.png" height="350" alt="photo2">
